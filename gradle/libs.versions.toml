@@ -1,0 +1,17 @@
+[versions]
+agp = "9.5.3"
+kotlin = "2.4.21"
+libxposed-api = "102.0.0"
+junit = "4.13.2"
+smali = "3.0.10"
+json = "20260814"
+
+[libraries]
+libxposed-api = { module = "io.github.libxposed:api", version.ref = "libxposed-api" }
+junit = { module = "junit:junit", version.ref = "junit" }
+smali = { module = "com.android.tools.smali:smali", version.ref = "smali" }
+json = { module = "org.json:json", version.ref = "json" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

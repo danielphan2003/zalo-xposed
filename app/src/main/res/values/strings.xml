@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zalo Xposed</string>
+    <string name="module_description">Hides ads, turns off telemetry and keeps recalled messages in Zalo.</string>
+</resources>
