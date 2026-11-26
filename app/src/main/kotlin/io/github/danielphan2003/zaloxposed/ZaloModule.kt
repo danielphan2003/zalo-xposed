@@ -10,6 +10,7 @@ import io.github.danielphan2003.zaloxposed.features.ads.AdtimaRequests
 import io.github.danielphan2003.zaloxposed.features.ads.ChatListAds
 import io.github.danielphan2003.zaloxposed.features.ads.FeedAds
 import io.github.danielphan2003.zaloxposed.features.ads.ShortVideoAds
+import io.github.danielphan2003.zaloxposed.features.recall.RecallKeeper
 import io.github.danielphan2003.zaloxposed.features.telemetry.AdsTracking
 import io.github.danielphan2003.zaloxposed.features.telemetry.AdvertisingId
 import io.github.danielphan2003.zaloxposed.features.telemetry.AnalyticsDatabase
@@ -67,6 +68,8 @@ class ZaloModule : XposedModule() {
             FeedAds, ChatListAds, AdSlotConfig, ShortVideoAds, AdtimaRequests,
             // Telemetry and ad tracking
             Crashlytics, FirebaseAnalytics, AdvertisingId, AnalyticsDatabase, AdsTracking,
+            // Recalled messages
+            RecallKeeper,
         )
     }
 }
