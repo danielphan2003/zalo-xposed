@@ -63,6 +63,23 @@ bytes. Tags `v*` publish `zalo-xposed-<version>.apk` and `SHA256SUMS` to GitHub 
 `ZaloApkTargetsTest` resolves every target against a real Zalo APK when `ZALO_APK` points at one;
 CI has no Zalo APK and skips it.
 
+## Status
+
+v0.1.0 was built and checked off-device only: unit tests, Android lint, and a test that resolved
+all 19 hook targets against Zalo 26.10.02 (versionCode 261002903). None of it has run on a phone
+yet. To check there, after patching Zalo with LSPatch and this module:
+
+- `adb logcat -s ZaloXposed` shows each feature as `installed`, with no `skipped` lines, and the
+  first launch logs `targets: resolved 19`; later launches log `from cache`.
+- Nhật ký feed, stories, the Messages tab and Zalo Video show no ads and no blank gaps; the story
+  tray still advances past where an ad would be; videos still start.
+- Ask a contact to send a text and recall it: it stays, labelled `[Đã thu hồi]` (or `[Recalled]`),
+  after reopening the chat and after restarting Zalo. Recalling your own message still removes it.
+- Zalo keeps working: sending, receiving, calls, notifications.
+
+Known limits: the recall label goes on the message text only, so a recalled photo, sticker or file
+stays visible but unlabelled; an open chat may only show the label after it is reopened.
+
 ## License
 
 GPL-3.0-only. See [LICENSE](LICENSE).
