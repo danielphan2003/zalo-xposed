@@ -10,6 +10,11 @@ import io.github.danielphan2003.zaloxposed.features.ads.AdtimaRequests
 import io.github.danielphan2003.zaloxposed.features.ads.ChatListAds
 import io.github.danielphan2003.zaloxposed.features.ads.FeedAds
 import io.github.danielphan2003.zaloxposed.features.ads.ShortVideoAds
+import io.github.danielphan2003.zaloxposed.features.telemetry.AdsTracking
+import io.github.danielphan2003.zaloxposed.features.telemetry.AdvertisingId
+import io.github.danielphan2003.zaloxposed.features.telemetry.AnalyticsDatabase
+import io.github.danielphan2003.zaloxposed.features.telemetry.Crashlytics
+import io.github.danielphan2003.zaloxposed.features.telemetry.FirebaseAnalytics
 import io.github.danielphan2003.zaloxposed.targets.TargetResolver
 import io.github.libxposed.api.XposedModule
 import io.github.libxposed.api.XposedModuleInterface.ModuleLoadedParam
@@ -60,6 +65,8 @@ class ZaloModule : XposedModule() {
         private val FEATURES = listOf(
             // Ads
             FeedAds, ChatListAds, AdSlotConfig, ShortVideoAds, AdtimaRequests,
+            // Telemetry and ad tracking
+            Crashlytics, FirebaseAnalytics, AdvertisingId, AnalyticsDatabase, AdsTracking,
         )
     }
 }
